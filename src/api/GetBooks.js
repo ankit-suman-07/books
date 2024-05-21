@@ -8,7 +8,7 @@ export const useGetData = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch("https://openlibrary.org/search.json?q=the+lord+of+the+rings");
+            const response = await fetch("https://openlibrary.org/search.json?q=all&limit=10&offset=10");
             const data = await response.json(); // Parse the response JSON
             console.log(data.docs); // Log the parsed data
             setBook(data.docs); // Set the parsed data into the context
